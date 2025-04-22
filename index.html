@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #d71111;
+    }
+    header, section, footer {
+      background: rgb(219, 113, 191);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #f1eaea;
+    }
+    label {
+      margin-right: 10px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    img {
+      max-width: 150px;
+      margin-right: 10px;
+      border-radius: 8px;
+    }
+  </style>
+ </head>
+ <body>
+ <header>
+  <h1>My Personal Website</h1>
+  <p>Created by: <strong>Sidhant Bhure</strong> | Roll No: <strong>38</strong></p>
+ </header>
+ <section>
+ Page 1
+Personal Website Source Code
+  <h2>Academic Skills & Projects</h2>
+  <ul>
+    <li>Programming in Python, C++, Java</li>
+    <li>Web Development (HTML, CSS, JavaScript)</li>
+    <li>Mini Project: Chatbot using NLP</li>
+    <li>Major Project: AI-based Attendance System</li>
+  </ul>
+ </section>
+ <section>
+  <h2>Subjects Learned</h2>
+  <ul>
+    <li>Data Structures</li>
+    <li>Operating Systems</li>
+    <li>Cyber Law</li>
+    <li>Machine Learning</li>
+    <li>Computer Networks</li>
+  </ul>
+ </section>
+ <section>
+  <h2>Photos & Certificates</h2>
+  <a href="SimplilearnCertificate.pdf">certificate</a>
+
+  
+  <p>*Note: Replace image src with your actual files or links.</p>
+ </section>
+ <section>
+  <h2>Hobbies</h2>
+  <ul>
+    <li>Photography</li>
+    <li>Reading Tech Blogs</li>
+    <li>Playing Chess</li>
+  </ul>
+ </section>
+ <section>
+  <h2>Form Interaction (JavaScript)</h2>
+  <form id="myForm">
+    <p>Choose your favorite subject:</p>
+    <label><input type="radio" name="subject" value="Cyber Law" /> Cyber Law</label>
+    <label><input type="radio" name="subject" value="OS" /> Operating Systems</label>
+    <label><input type="radio" name="subject" value="DSA" /> Data Structures</label>
+    <p>Select your interest:</p>
+    <select id="interest">
+      <option value="AI">Artificial Intelligence</option>
+      <option value="Web Dev">Web Development</option>
+      <option value="Cyber Security">Cyber Security</option>
+    </select>
+ Page 2
+    <br/><br/>
+ Personal Website Source Code
+    <button type="button" onclick="displaySubmission()">Submit</button>
+  </form>
+ </section>
+ <section id="submissionSection" style="display: none;">
+  <h2>Submission Page</h2>
+  <p><strong>Name:</strong> John Doe</p>
+  <p><strong>Roll No:</strong> 23CSE45</p>
+  <p><strong>Favorite Subject:</strong> <span id="favSubject"></span></p>
+  <p><strong>Interest Area:</strong> <span id="interestArea"></span></p>
+ </section>
+ <footer>
+  <p>&copy; 2025 Sidhant Bhure</p>
+ </footer>
+ <script>
+  function displaySubmission() {
+    const selectedSubject = document.querySelector('input[name="subject"]:checked');
+    const selectedInterest = document.getElementById("interest").value;
+    if (selectedSubject) {
+      document.getElementById("favSubject").innerText = selectedSubject.value;
+      document.getElementById("interestArea").innerText = selectedInterest;
+      document.getElementById("submissionSection").style.display = "block";
+    } else {
+      alert("Please select a subject.");
+    }
+  }
+ </script>
+ </body>
+ </html>
